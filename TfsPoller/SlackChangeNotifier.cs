@@ -51,8 +51,6 @@ namespace TfsPoller
 
         private string GetChannel(BuildStatus buildStatus)
         {
-            if (buildStatus == BuildStatus.Failed)
-                return _configuration.SlackFailedChannel;
             return _configuration.SlackDefaultChannel;
         }
 
